@@ -1,0 +1,24 @@
+<!--Formulario-->
+<form>
+    <input type="text" placeholder="Curso" nome="nomeCurso" [(ngModel)]="curso.nomeCurso">
+    <input type="number" placeholder="Valor" nome="valorCurso" [(ngModel)]="curso.valorCurso">
+    <input type="text" placeholder="Área" nome="areaCurso" [(ngModel)]="curso.areaCurso">
+    <input type="button" value="Cadastrar">
+</form>
+
+
+<!--Tabela-->
+<table>
+    <tr>
+        <td>Curso</td>
+        <td>Valor</td>
+        <td>Área</td>
+        <td>Ações</td>
+    </tr>
+
+    <tr *ngFor="let curso of vetorCursos">
+        <td>{{curso.nomeCurso}}</td>
+        <td>{{curso.valorCurso}}</td>
+        <td>{{curso.areaCurso}}</td>
+    </tr>
+</table>
